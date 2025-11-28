@@ -2,18 +2,18 @@
 
 This project documents a foundational, hands-on exercise designed to practice core security principles and administrative configurations within **AWS Identity and Access Management (IAM)**. The primary focus was on designing and testing granular permissions to ensure strict application of the **Principle of Least Privilege**.
 
-**Key Concepts Applied**
+### Key Concepts Applied
 * **AWS IAM**: Users, Groups, and Group-Based Policy Management
 * **Role-Based Access Control**: Implementing permissions based on job function (Support vs. Admin)
 * **Principle of Least Privilege**: Enforced policy design to grant only necessary permissions.
 * **Policy Granularity**: Differentiating between Read-Only, View, and Operational control.
 * **Access Verification**: End-to-end testing of restricted user access.
 
-**Lab Objectives and Execution Steps**
+### Lab Objectives and Execution Steps
 
 The following steps were executed to demonstrate proficiency in IAM setup, custom policy definition, and access control:
 
-1. **Identity Structure Creation**: Created **three distinct IAM Users**(`user-1`, `user-2`, `user-3`) and **three dedicated IAM Groups** (`S3-Support`, `EC2-Support`, `EC2-Admin`) to manage permissions centrally.
+1. **Identity Structure Creation**: Created **three distinct IAM Users** (`user-1`, `user-2`, `user-3`) and **three dedicated IAM Groups** (`S3-Support`, `EC2-Support`, `EC2-Admin`) to manage permissions centrally.
 2. **[User Assignment](https://github.com/elizabethhstewart/aws-iam/blob/4e693e61b19dc57af8018be88e294b1369bb2078/assets/IAM%20users%20and%20user%20groups.png)**: Assigned each user to their specific group to align with defined job roles (e.g., `user-1` to `S3-Support`)
 3. **Policy Definition & Assignment**: Attached policies to each group to striclty control access to AWS resources:
      * `S3-Support` **Group**: Granted Read-Only access to Amazon S3. 
